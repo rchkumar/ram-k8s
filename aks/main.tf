@@ -38,3 +38,10 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     azurerm_resource_group.learnk8srg
   ]
 }
+
+resource "azurerm_kubernetes_cluster_node_pool" "mem" {
+ kubernetes_cluster_id = azurerm_kubernetes_cluster.cluster.id
+ name                  = "mem"
+ node_count            = "1"
+ vm_size               = "standard_d11_v2"
+}

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ramch11/first-k8s-app:2.0.0
+          image: ramch11/first-k8s-app:1.0.0
           ports:
             - containerPort: 80
           imagePullPolicy: Always
